@@ -1,0 +1,9 @@
+<p>table2 works!</p>
+
+<ul>
+    <li *ngFor="let u of users">
+        <p>{{u.name}} - {{u.email}}</p>
+        <button (click)="removeUser(users.indexOf(u))">Supprimer</button>
+    </li>
+</ul>
+

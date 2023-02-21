@@ -1,0 +1,36 @@
+<h2>NG IF</h2>
+
+<button (click)="setDisplay()">ON/OFF</button>
+
+<p *ngIf="display">pafhapufhaupfhpaj apzuhdfauzhu auizfhaubgfyagfyaj afabnfhjabhfpyuabgfhbahjbfiazbfhiazbf</p>
+
+<br>
+
+<h2>NG FOR</h2>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{user.name}} - {{user.age}}
+  </li>
+</ul>
+
+<h2>NG SWITCH</h2>
+
+<select [(ngModel)]="selector">
+  <option value="0">1</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+
+<div [ngSwitch]="selector">
+  <p *ngSwitchCase="1">Vous avez sélectionné le 1</p>
+  <p *ngSwitchCase="2">Vous avez sélectionné le 2</p>
+  <p *ngSwitchCase="3">Vous avez sélectionné le 3</p>
+  <p *ngSwitchCase="4">Vous avez sélectionné le 4</p>
+  <p *ngSwitchDefault>RIEN</p>
+</div>
+
+
+

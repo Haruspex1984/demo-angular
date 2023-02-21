@@ -1,0 +1,15 @@
+<div id="chrono"><h1>Chronomètre</h1>
+  <h1>{{time|chrono}}</h1>
+  <h2>depuis la dernière Masterclass de Gavin</h2></div>
+
+
+<div id="buttons">
+  <button (click)="startChrono()" [disabled]="startIsClosed">Start</button>
+  <button (click)="pauseChrono()">Pause</button>
+  <button (click)="resetChrono()">Reset</button>
+</div>
+
+<div id="gavin" *ngIf="startIsClosed">
+  <img src="assets/images/gavin.jpg" id="gavinImage">
+</div>
+

@@ -1,0 +1,14 @@
+<br>
+<input type="text" [(ngModel)]="user.name" placeholder="Nom">
+<input type="number" [(ngModel)]="user.age" placeholder="age">
+<br>
+<button (click)="addUser()">Ajouter</button>
+<button (click)="clearList()" [disabled]="isEmpty">Vider la liste</button>
+<button (click)="removeLastUser()" [disabled]="isEmpty">Annuler dernier ajout</button>
+
+<ol>
+  <li *ngFor="let user of users">
+    <p>Nom : {{user.name}}, age : {{user.age}}</p>
+    <button (click)="removeUser(users.indexOf(user))">Supprimer</button>
+  </li>
+</ol>

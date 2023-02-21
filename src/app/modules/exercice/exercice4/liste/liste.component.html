@@ -1,0 +1,7 @@
+<ol>
+    <li *ngFor="let a of articles">
+        <p>{{a.name}} | {{a.quantity}}</p>
+        <button (click)="removeArticle(articles.indexOf(a))">Retirer 1</button>
+        <button (click)="deleteArticle(articles.indexOf(a))">Supprimer</button>
+    </li>
+</ol>
